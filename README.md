@@ -1,6 +1,3 @@
-criando um Scanner de redes usando Java Script
-
-
 
 import java.util.Scanner;
 import java.io.IOException;
