@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Cadastro</title>
+
+    <!-- Importação modular do Firebase -->
+    <script type="module">
+        // Importando as funções do Firebase
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-auth.js";
+        import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.9.3/firebase-firestore.js";
+
+        // Configure o Firebase com os detalhes do seu projeto
+        const firebaseConfig = {
+            apiKey: "AIzaSyBE5ZUukbcBmcqRUQ_9EvJI_FtdnJ7VFCY",
+            authDomain: "cadastro-de-dados-1e8f5.firebaseapp.com",
+            projectId: "cadastro-de-dados-1e8f5",
+            storageBucket: "cadastro-de-dados-1e8f5.appspot.com",
+            messagingSenderId: "123456789012",
+            appId: "1:123456789012:web:abcdef1234567890"
+        };
+
+        // Inicializa o Firebase usando a API.
+        const app = initializeApp(firebaseConfig);
+        
+        // Agora, podemos acessar os serviços de autenticação e Firestore de maneira modular
+        const auth = getAuth(app); // Autenticação
+        const firestore = getFirestore(app); // Firestore
+
+        // Função para registrar usuário
+        document.getElementById("cadastrar").addEventListener("click", function() {
+            const email = document.getElementById("email").value;
+            const senha = document.getElementById("senha").value;
+
+            // Criação do usuário no Firebase Authentication
+            createUserWithEmailAndPassword(auth, email, senha)
+                .then((userCredential) => {
+                    // Usuário criado com sucesso
+                    const user = userCredential.user;
+                    alert("Usuário registrado com sucesso!");
+                    
+                    // Adiciona o usuário ao Firestore (opcional)
+                    addDoc(collection(firestore, "usuarios"), {
+                        email: email,
+                        uid: user.uid
+                    }).then(() => {
+                        console.log("Usuário adicionado ao Firestore.");
+                    }).catch((error) => {
+                        console.error("Erro ao adicionar usuário ao Firestore: ", error);
+                    });
+                })
+                .catch((error) => {
+                    // Em caso de erro, exibe uma mensagem
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert(`Erro ao cadastra esse usuario: ${errorCode}, ${errorMessage}`);
+                });
+        });
+    </script>
+</head>
+<body>
+    <h1>Formulario de Cadastro</h1> 
+    
+    <p>Email</p>
+    <input id="email" type="email" />
+    
+    <p>Senha</p>
+    <input id="senha" type="password" />
+
+    <button id="cadastrar">Cadastrar</button>
+
+    
+</body>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+        padding: 20px;
+        
+        
+    }
+    h1 {
+        color: #333;
+        
+        
+        
+    }
+    input {
+        display: block;
+        margin-bottom: 10px;
+        padding: 10px;
+        width: 300px;
+        
+        
+        
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        cursor: pointer;
+        
+    }
+    button:hover {
+        background-color: #218838;
+    }
+    </style>
+</html>
+
