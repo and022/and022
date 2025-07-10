@@ -30,7 +30,7 @@ for i, vendedor in enumerate(tabela["Vendedor"]):
     QuantidadedeVendas = tabela.loc[i, "Quantidade de vendas"]
     Vcomissao = tabela.loc[i, "Valor comissão em R$"]
 
-    google.get("https://docs.google.com/forms/d/e/1FAIpQLSc_R5AW4RK80Iu9HG-joH9HiK1xBDiZqgKmh8-dQtUdQV5YYg/viewform?usp=preview")
+    google.get("Coloque a url com o https//: do seu formulario")
     time.sleep(10)
 
     #preenchendo o campo Vendedor 
