@@ -52,6 +52,6 @@ for i, vendedor in enumerate(tabela["Vendedor"]):
     google.find_element("xpath", '//*[@id="mG61Hd"]/div[2]/div/div[2]/div[6]/div/div/div[2]/div/div[1]/div/div[1]/input').send_keys(str(Vcomissao))
     time.sleep(2)
     #clicando no botão enviar
-    google.find_element("xpath", '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span').click
+    google.find_element("xpath", '//*[@id="mG61Hd"]/div[2]/div/div[3]/div[1]/div[1]/div/span').click()
     time.sleep(2)
 
