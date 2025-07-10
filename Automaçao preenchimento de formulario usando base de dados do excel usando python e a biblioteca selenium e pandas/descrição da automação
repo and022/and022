@@ -1,0 +1,52 @@
+Esse script Python chamado autoexcel.py automatiza o preenchimento de um formulário do Google Forms com dados extraídos de uma planilha do Excel. Abaixo está a descrição detalhada do que essa automação faz:
+
+🔧 Bibliotecas Utilizadas
+selenium: para automação do navegador (Chrome).
+
+pandas: para leitura da planilha Excel.
+
+time: para pausar o código entre ações.
+
+openpyxl: (comentado como necessário) para ler arquivos .xlsx.
+
+📂 Etapas da Automação
+1. Leitura da Planilha Excel
+O script carrega uma planilha localizada em:
+
+makefile
+Copy
+Edit
+C:\Users\Andre Neri\Desktop\planilhas excel\Planilha\planilha vendas.xlsx
+A planilha deve conter as colunas:
+
+Vendedor
+
+Código
+
+Loja/Região
+
+Setor
+
+Quantidade de vendas
+
+Valor comissão em R$
+
+2. Abertura do Navegador
+Usa o ChromeDriver via Selenium para abrir o Google Chrome.
+
+Acessa o link de um formulário do Google Forms.
+
+3. Preenchimento Automático
+Para cada linha da planilha, o script:
+
+Extrai os dados de cada campo.
+
+Preenche os campos correspondentes no formulário.
+
+Clica em "Enviar" no final.
+
+4. Pausa entre as ações
+Usa time.sleep(segundos) para esperar entre cada ação, o que ajuda a evitar erros por carregamento lento da página.
+
+📌 Resumo Funcional
+Esse script automatiza o processo de envio de dados de vendas (como vendedor, código, loja, setor, quantidade e comissão) para um formulário do Google, usando os dados lidos de uma planilha Excel.
