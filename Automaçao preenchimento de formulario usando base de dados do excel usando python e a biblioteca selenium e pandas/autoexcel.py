@@ -19,6 +19,32 @@ google = webdriver.Chrome()
 
 print("Iniciando o navegador e acessando o formulario!")
 
+google.maximize_window()
+
+google.get("https://www.google.com.br")
+time.sleep(5)
+# clicando no botão de login do google
+google.find_element("xpath", '//*[@id="gb"]/div[3]/a').click()
+time.sleep(7)
+
+#digitando o email/login
+google.find_element("xpath", '//*[@id="identifierId"]').send_keys("digite o seu email")
+time.sleep(4)
+
+
+
+#digitando em avançar
+google.find_element("xpath", '//*[@id="identifierNext"]').click()
+time.sleep(4)
+
+#digitando a senha 
+google.find_element("xpath", '//*[@id="password"]/div[1]/div/div[1]/input').send_keys("digite a sua senha")
+time.sleep(3)
+
+#clicando em avançar
+google.find_element("xpath", '//*[@id="passwordNext"]').click()
+time.sleep(3)
+
 
 # utilizaremos o for para a repetiçao do código no caso para  buscar as informaçoes na planilha para fazer o preenchimeto dos dados sem a necessidade de parar o código
 # chamando o metodo enumeratee para acessar a os dados da variavel tabela onde se encontra a planilha cadastro
