@@ -6,6 +6,6 @@ t.me/computers202012
 Canal no You Tube de tecnologia relacionado tambem a manutençao de microcomputadores e Cisco Packet Tracer
 https://www.youtube.com/@andry.tecnology0226
 
-Canal voltado Para programaçao  Tech.Neri022 
+Meu novo canal voltado Para programaçao  Tech.Neri022 
 https://www.youtube.com/@Tech.Neri022
 
