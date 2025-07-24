@@ -1,4 +1,4 @@
-Sou André Neri Batista estou aqui para compartilhar o pouco de conhecimento que obtive com estudos e pesquisas , espero que voces gostem
+
 
 meu canal no telegram com conteúdos relecionados a tecnologia redes de computadores manutençao de microcomputadores
 t.me/computers202012
