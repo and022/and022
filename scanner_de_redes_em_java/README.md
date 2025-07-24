@@ -1,18 +1,16 @@
-## Getting Started
+🔍 Scanner de Rede em Java
+Este projeto é um simples scanner de rede desenvolvido em Java, que permite ao usuário verificar quais dispositivos estão acessíveis em uma sub-rede local (LAN).
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+📌 Objetivo
+Verificar quais endereços IP em uma sub-rede estão ativos e acessíveis, utilizando a função isReachable() da biblioteca InetAddress.
 
-## Folder Structure
+🚀 Como funciona
+O programa solicita ao usuário que insira o início do IP da sub-rede (ex: 192.168.0.).
 
-The workspace contains two folders by default, where:
+Ele realiza um loop de verificação dos endereços IPs de 192.168.0.1 até 192.168.0.254.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Para cada IP, ele tenta verificar se o dispositivo está acessível (ping) com um tempo limite de 1 segundo.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
+Se o IP responder, ele é considerado acessível e será exibido no console.
 
 The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
