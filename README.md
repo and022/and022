@@ -19,8 +19,7 @@ Validações e regras de negócio
 Armazenamento persistente de informações
 
 Operações CRUD completas
-
-Integração entre Python e Java
+Create , Update , Update e Delete
 
 Tecnologias: Python, Pandas, Java, SQLite3, POO, CRUD
 
