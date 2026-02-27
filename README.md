@@ -25,8 +25,9 @@ Tecnologias: Python, Pandas, Java, SQLite3, POO, CRUD
 
 Projeto educativo para demonstração de integração entre tecnologias.
 
+Meu WebSite Geopolitica & História 
+https://and022.github.io/Geoehistoria.github.io/
 
 
-Meu novo canal voltado Para programaçao  Tech.Neri022 
-https://www.youtube.com/@Tech.Neri022
+
 
